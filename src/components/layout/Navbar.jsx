@@ -15,15 +15,24 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 no-print">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center space-x-2 flex-shrink-0">
-          <span className="text-xl md:text-2xl font-heading font-bold text-primary truncate">Restaurant La Baleine</span>
+        <Link to="/" className="flex items-center space-x-3 flex-shrink-0 group">
+          <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl overflow-hidden shadow-lg border-2 border-primary/20 group-hover:border-primary transition-all duration-300 bg-white">
+            <img 
+              src="/images/logo.jpg" 
+              alt="La Baleine Logo" 
+              className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+            />
+          </div>
+          <span className="text-lg md:text-xl font-heading font-bold text-primary tracking-tight hidden sm:block">
+            La Baleine Bleue
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-6 text-sm font-medium">
           <Link to="/" className="text-secondary-dark hover:text-primary transition-colors">Accueil</Link>
           <Link to="/a-propos" className="text-secondary-dark hover:text-primary transition-colors">À Propos</Link>
-          <Link to="/catalogue" className="text-secondary-dark hover:text-primary transition-colors">Catalogue</Link>
+          <Link to="/catalogue" className="text-secondary-dark hover:text-primary transition-colors">La Carte</Link>
           <Link to="/contact" className="text-secondary-dark hover:text-primary transition-colors">Contact</Link>
           {isAdmin && (
             <Link to="/admin" className="text-primary font-bold hover:text-primary/80 transition-colors flex items-center">
@@ -79,7 +88,7 @@ const Navbar = () => {
             <div className="flex flex-col p-4 space-y-4 text-sm font-medium">
               <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="p-2 hover:bg-slate-50 rounded">Accueil</Link>
               <Link to="/a-propos" onClick={() => setIsMobileMenuOpen(false)} className="p-2 hover:bg-slate-50 rounded">À Propos</Link>
-              <Link to="/catalogue" onClick={() => setIsMobileMenuOpen(false)} className="p-2 hover:bg-slate-50 rounded">Catalogue</Link>
+              <Link to="/catalogue" onClick={() => setIsMobileMenuOpen(false)} className="p-2 hover:bg-slate-50 rounded">La Carte</Link>
               <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className="p-2 hover:bg-slate-50 rounded">Contact</Link>
               <Link to={user ? "/mon-compte" : "/login"} onClick={() => setIsMobileMenuOpen(false)} className="p-2 flex items-center text-primary font-bold">
                 <User className="w-4 h-4 mr-2" />

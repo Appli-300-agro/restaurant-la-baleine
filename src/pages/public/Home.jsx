@@ -118,28 +118,28 @@ const Home = () => {
 
   const slides = [
     {
-      title: <>L'art de la <br /> <span className="text-primary-light italic">Gastronomie</span></>,
-      subtitle: "Gastronomie, Saveurs Authentiques et Service d'Excellence. La référence premium pour les pros et particuliers au Cameroun.",
-      cta1: { label: "Catalogue", link: "/catalogue", icon: true },
-      cta2: { label: "Expertise", link: "/contact" },
-      icon: "☀️",
-      iconLabel: "Solutions Solaires"
+      title: <>La Baleine Bleue <br /> <span className="text-primary-light italic">de Massa</span></>,
+      subtitle: "L'institution gastronomique de Youpwe. Vivez une expérience culinaire unique face au fleuve Wouri.",
+      cta1: { label: "Voir la Carte", link: "/catalogue", icon: true },
+      cta2: { label: "Nous Contacter", link: "/contact" },
+      icon: "🌊",
+      iconLabel: "Vue sur le Wouri"
     },
     {
-      title: <>Votre Partenaire <br /> <span className="text-primary-light italic">Stratégique</span></>,
-      subtitle: "Restaurant La Baleine accompagne le développement industriel et domestique avec des solutions innovantes et durables.",
-      cta1: { label: "À Propos", link: "/a-propos", icon: false },
-      cta2: { label: "Nos Secteurs", link: "#secteurs", action: scrollToSectors },
-      icon: "🏢",
-      iconLabel: "Expertise Pro"
+      title: <>Le Rendez-vous du <br /> <span className="text-primary-light italic">Dimanche</span></>,
+      subtitle: "Ne manquez pas notre buffet à volonté chaque dimanche. Un festin de saveurs locales pour toute la famille.",
+      cta1: { label: "Voir le Menu", link: "/catalogue", icon: false },
+      cta2: { label: "Nos Spécialités", link: "#secteurs", action: scrollToSectors },
+      icon: "🥗",
+      iconLabel: "Buffet Royal"
     },
     {
-      title: <>Une Équipe <br /> <span className="text-primary-light italic">Dédiée</span></>,
-      subtitle: "Besoin d'un devis personnalisé ou d'une assistance technique ? Nos experts vous répondent sous 24h.",
-      cta1: { label: "Contact", link: "/contact", icon: true },
-      cta2: { label: "WhatsApp", link: "https://wa.me/237600000000" },
-      icon: "📞",
-      iconLabel: "Support 24/7"
+      title: <>Soirées <br /> <span className="text-primary-light italic">Live Music</span></>,
+      subtitle: "Profitez d'une ambiance exceptionnelle avec nos orchestres live chaque week-end. Gastronomie et divertissement garantis.",
+      cta1: { label: "Réserver", link: "/contact", icon: true },
+      cta2: { label: "WhatsApp", link: "https://wa.me/237694371460" },
+      icon: "🎸",
+      iconLabel: "Ambiance Live"
     }
   ];
 
@@ -161,6 +161,10 @@ const Home = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-[95vh] flex items-center overflow-hidden text-white bg-secondary-dark">
+        <div className="absolute inset-0 z-0">
+          <img src="/images/hero-bg.jpg" alt="Restaurant La Baleine Background" className="w-full h-full object-cover opacity-50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-secondary-dark/60 via-secondary-dark/40 to-secondary-dark/60" />
+        </div>
         <ParticlesBackground />
         
         <div className="container mx-auto px-4 relative z-10 py-12 md:py-20">
@@ -223,11 +227,11 @@ const Home = () => {
                     />
                     <div className="relative z-10 text-center space-y-4 sm:space-y-8">
                         <motion.div 
-                          className="bg-white/10 p-4 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] inline-flex backdrop-blur-2xl border border-white/20 shadow-inner"
+                          className="bg-white p-2 sm:p-4 rounded-[1.5rem] sm:rounded-[2.5rem] inline-flex backdrop-blur-2xl border border-white/20 shadow-2xl overflow-hidden"
                           animate={{ y: [0, -10, 0] }}
                           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                         >
-                            <span className="text-4xl sm:text-7xl drop-shadow-2xl">{slides[currentSlide].icon}</span>
+                            <img src="/images/logo.jpg" alt="La Baleine Logo" className="w-24 h-24 sm:w-40 sm:h-40 object-cover rounded-xl" />
                         </motion.div>
                         <div className="space-y-1 sm:space-y-2">
                             <h3 className="text-xl sm:text-3xl font-heading font-bold tracking-tight">{slides[currentSlide].iconLabel}</h3>
@@ -260,19 +264,19 @@ const Home = () => {
       <AnimatedSection className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <FeatureCard 
-            icon={Truck} 
-            title="Service Express" 
-            description="Une expérience culinaire livrée chez vous ou à savourer sur place. avec calcul en temps réel."
-          />
-          <FeatureCard 
             icon={ShieldCheck} 
-            title="Paiement Sécurisé" 
-            description="Transactions certifiées via MoMo, OM ou Carte Bancaire. Sécurité maximale."
+            title="Produits Frais" 
+            description="Une cuisine authentique élaborée chaque jour avec les meilleurs arrivages de Youpwe et du Port."
           />
           <FeatureCard 
             icon={Clock} 
-            title="Support Premium" 
-            description="Une équipe dédiée et un assistant IA disponible 24/7 pour vos besoins techniques."
+            title="Service à Table" 
+            description="Une équipe professionnelle à votre écoute pour un service de qualité dans un cadre ventilé et agréable."
+          />
+          <FeatureCard 
+            icon={LayoutDashboard} 
+            title="Cadre Unique" 
+            description="Profitez d'une vue exceptionnelle sur le fleuve Wouri pour vos repas en famille ou d'affaires."
           />
         </div>
       </AnimatedSection>
@@ -281,11 +285,11 @@ const Home = () => {
       <AnimatedSection className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
             <div className="space-y-4">
-                <h2 className="text-5xl font-heading font-bold text-secondary-dark tracking-tighter">Sélection Vedette</h2>
-                <p className="text-secondary text-lg font-light">Le meilleur de l'innovation technologique et du confort.</p>
+                <h2 className="text-5xl font-heading font-bold text-secondary-dark tracking-tighter">Nos Vedettes</h2>
+                <p className="text-secondary text-lg font-light">Une sélection des créations les plus appréciées de notre chef.</p>
             </div>
             <Link to="/catalogue" className="group flex items-center text-primary font-bold text-lg hover:text-primary/80 transition-colors">
-                Voir toute la collection 
+                Voir toute la carte 
                 <div className="ml-3 p-2 bg-primary/5 rounded-full group-hover:bg-primary/10 transition-colors">
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -308,18 +312,18 @@ const Home = () => {
       <div ref={sectorsRef}>
         <AnimatedSection className="container mx-auto px-4 bg-slate-50/50 py-16 md:py-24 rounded-[3rem] md:rounded-[4rem] border border-slate-100">
             <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20 space-y-4">
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-secondary-dark tracking-tighter uppercase">Notre Carte</h2>
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-secondary-dark tracking-tighter uppercase">Notre Univers</h2>
                 <div className="h-1 w-16 md:h-1.5 md:w-20 bg-primary mx-auto rounded-full" />
-                <p className="text-secondary text-lg md:text-xl font-light pt-4 px-4">L'art de la gastronomie et du service d'exception.</p>
+                <p className="text-secondary text-lg md:text-xl font-light pt-4 px-4">L'art de la gastronomie camerounaise au bord de l'eau.</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
                 {CATEGORIES.map((cat, idx) => {
                     const themes = {
-                        'Plats Signatures': { icon: "🥘", color: "from-orange-400 to-red-500" },
-                        'Entrées': { icon: "🥗", color: "from-green-400 to-emerald-600" },
-                        'Boissons': { icon: "🍷", color: "from-blue-400 to-indigo-600" },
-                        'Desserts': { icon: "🍰", color: "from-pink-400 to-rose-500" }
+                        'Spécialités de la Maison': { icon: "🥘", color: "from-orange-400 to-red-500" },
+                        'Grillades & Fruits de Mer': { icon: "🦞", color: "from-blue-400 to-indigo-600" },
+                        'Buffet & Entrées': { icon: "🥗", color: "from-green-400 to-emerald-600" },
+                        'Boissons & Cocktails': { icon: "🍹", color: "from-pink-400 to-rose-500" }
                     };
                     const theme = themes[cat] || { icon: "🍽️", color: "from-slate-400 to-slate-600" };
                     return <CategoryCard key={idx} title={cat} {...theme} />;

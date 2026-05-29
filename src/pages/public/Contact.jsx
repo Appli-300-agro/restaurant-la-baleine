@@ -9,9 +9,9 @@ const Contact = () => {
       {/* Header */}
       <section className="bg-primary py-20 text-white text-center">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-heading font-bold mb-4">Contactez-nous</h1>
+          <h1 className="text-4xl font-heading font-bold mb-4">Contactez La Baleine</h1>
           <p className="text-primary-light max-w-xl mx-auto">
-            Une question technique ? Un besoin urgent ? Notre équipe réagit sous 24h pour vous accompagner.
+            Une réservation ? Une commande pour emporter ? Notre équipe est à votre écoute pour vous accueillir au bord du Wouri.
           </p>
         </div>
       </section>
@@ -26,8 +26,9 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-bold text-secondary-dark mb-1">Téléphone & WhatsApp</h3>
-                <p className="text-sm text-secondary">+237 698 12 54 05</p>
-                <p className="text-xs text-primary font-medium mt-1">Lundi - Samedi : 8h00 - 18h00</p>
+                <p className="text-sm text-secondary">+237 6 94 37 14 60</p>
+                <p className="text-sm text-secondary">+237 6 99 54 70 87</p>
+                <p className="text-xs text-primary font-medium mt-1">Ouvert 7j/7 : 06h00 - 00h00</p>
               </div>
             </div>
 
@@ -37,8 +38,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-bold text-secondary-dark mb-1">Email</h3>
-                <p className="text-sm text-secondary">contact@restaurantlabaleine.cm</p>
-                <p className="text-sm text-secondary">support@restaurantlabaleine.cm</p>
+                <p className="text-sm text-secondary">contact@labaleine-douala.com</p>
               </div>
             </div>
 
@@ -49,8 +49,9 @@ const Contact = () => {
               <div>
                 <h3 className="font-bold text-secondary-dark mb-1">Adresse</h3>
                 <p className="text-sm text-secondary leading-relaxed">
-                  Douala, Cameroun<br />
-                  Siège Social - Zone Industrielle
+                  Zone aval du Port de Douala (PAD)<br />
+                  Face à la Base Navale<br />
+                  Douala, Cameroun
                 </p>
               </div>
             </div>
@@ -95,7 +96,7 @@ const Contact = () => {
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div className="bg-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-2 border border-slate-200">
                 <MapPin className="text-primary w-5 h-5" />
-                <span className="font-bold text-sm">Retrouvez-nous à Douala</span>
+                <span className="font-bold text-sm">Retrouvez-nous au bord du Wouri</span>
             </div>
         </div>
         <img 
